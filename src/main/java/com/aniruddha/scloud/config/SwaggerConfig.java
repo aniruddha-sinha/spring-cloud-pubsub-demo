@@ -28,8 +28,8 @@ public class SwaggerConfig {
 	}
 	
 	private ApiInfo metaInfo() {
-		final String title = "Spring Cloud MySQL Demo APIs";
-		final String description = "Demonstration of Spring Cloud GCP features: MySQL";
+		final String title = "Spring Cloud Pub/Sub Demo APIs";
+		final String description = "Demonstration of Spring Cloud GCP features: Pub/Sub";
 		final String version = "0.0.1-SNAPSHOT";
         @SuppressWarnings("deprecation")
 		ApiInfo apiInfo = new ApiInfo(title, description, version, null, null, null, null);

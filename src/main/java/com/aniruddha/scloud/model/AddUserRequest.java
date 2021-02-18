@@ -1,23 +1,24 @@
 package com.aniruddha.scloud.model;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-@JsonInclude(Include.NON_NULL)
-public class User {
+public class AddUserRequest {
+	@JsonProperty("user-id")
 	private Integer userId;
+	@JsonProperty("user-name")
 	private String userName;
+	@JsonProperty("user-email")
 	private String email;
+	@JsonProperty("mobile-number")
 	private String mobileNumber;
+	@JsonProperty("fax-number")
 	private String faxNumber;
+	@JsonProperty("is-email-valid")
 	private Boolean isEmailValid;
+	@JsonProperty("is-mobile-valid")
 	private Boolean isMobileValid;
+	@JsonProperty("user-status")
 	private String userStatus;
-	private Boolean deleted;
-	private String creationTimestamp;
-	private Integer createdBy;
-	private String modifiedTimestamp;
-	private Integer modifiedBy;
 
 	public Integer getUserId() {
 		return userId;
@@ -82,45 +83,4 @@ public class User {
 	public void setUserStatus(String userStatus) {
 		this.userStatus = userStatus;
 	}
-
-	public Boolean isDeleted() {
-		return deleted;
-	}
-
-	public void setDeleted(Boolean isDeleted) {
-		this.deleted = isDeleted;
-	}
-
-	public String getCreationTimestamp() {
-		return creationTimestamp;
-	}
-
-	public void setCreationTimestamp(String creationTimestamp) {
-		this.creationTimestamp = creationTimestamp;
-	}
-
-	public Integer getCreatedBy() {
-		return createdBy;
-	}
-
-	public void setCreatedBy(Integer createdBy) {
-		this.createdBy = createdBy;
-	}
-
-	public String getModifiedTimestamp() {
-		return modifiedTimestamp;
-	}
-
-	public void setModifiedTimestamp(String modifiedTimestamp) {
-		this.modifiedTimestamp = modifiedTimestamp;
-	}
-
-	public Integer getModifiedBy() {
-		return modifiedBy;
-	}
-
-	public void setModifiedBy(Integer modifiedBy) {
-		this.modifiedBy = modifiedBy;
-	}
-
 }
